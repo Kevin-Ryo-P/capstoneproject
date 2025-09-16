@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+}
+
+.dash-container {
+    display: flex;
+    height: 100%;
+}
+
+.dash-nav {
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    width: 100%;
+}
+
+.dashboard-option {
+    display: flex;
+    width: 100%;
+}
+
+.dashboard-option p {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dash-main {
+    flex: 1;
+    background-color: var(--bgColor);
+    padding: 20px;
+}
+
+.dash-main p {
+    margin: 0;
+}
+
+.navText{
+    color: white;
+}

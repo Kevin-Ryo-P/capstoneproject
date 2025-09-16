@@ -1,0 +1,31 @@
+:root {
+    --primaryColor: #013991;
+    --textColor: #ffffff;
+    --bgColor: #f0f0f0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "nav main"
+    ;
+    grid-template-columns: 15% 1fr;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: var(--primaryColor);
+}
+
+.dash-main{
+    grid-area: main;
+}

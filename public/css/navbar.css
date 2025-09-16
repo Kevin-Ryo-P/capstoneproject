@@ -1,0 +1,148 @@
+.navbar {
+    margin-top: 10px;
+    margin-left: 16px;
+    display: flex;
+    width: 98.5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    min-width: 230px;
+}
+
+.logoUndip {
+    width: 50px;
+}
+
+.logoTextContainer {
+    margin-left: 10px;
+}
+
+.logoText-fakultas {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+}
+
+.logoText-dipo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+    color: #555;
+}
+
+.navbarMenu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.navbarMenuOpt {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.navbar-icon {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+}
+
+.navbar-icon-image {
+    vertical-align: middle;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+}
+
+.calendarOpt {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+}
+
+.calendar-link img {
+    margin-right: 8px;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.calendar-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+    margin-top: 4px;
+    font-size: 1em;
+}
+
+.fa-stack {
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+}
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--primaryColor);
+    cursor: pointer;
+  }
+  
+  .profile-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transform: translateY(-10px);
+    right: 6px;
+  }
+  
+  .profile-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .profile-dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .profile-dropdown:hover .profile-dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }

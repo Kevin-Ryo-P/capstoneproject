@@ -1,0 +1,37 @@
+:root{
+    --primaryColor: rgba(1,39,145,255);
+    --externalMain: rgba(100,203,192,255);
+    --externalSecond:none;
+    --internalMain:rgba(45,201,113,255);
+    --internalSecond:none;
+    --maintananceMain:rgba(220,74,64,255);
+    --maintananceSecond:none;
+    --zoomMain:rgba(242,187,7,255);
+    --zoomSecond:none;
+}
+
+.navbar-holder{
+    border-bottom: solid 3px var(--primaryColor);
+    padding-bottom: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+}
+
+.header{
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

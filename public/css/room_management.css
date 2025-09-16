@@ -1,0 +1,221 @@
+:root {
+    --primaryColor: #013991;
+    --textColor: #ffffff;
+    --bgColor: #f0f0f0;
+    --tableBg: #ffffff;
+    --headerBg: var(--primaryColor);
+    --successColor: #28a745;
+    --errorColor: #dc3545;
+    --primaryButton: #007bff;
+    --deleteButton: #dc3545;
+    --editButton: #ffc107;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "nav main";
+    grid-template-columns: 15% 1fr;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bgColor);
+}
+
+.nav {
+    grid-area: nav;
+    background-color: var(--primaryColor);
+}
+
+.dash-main {
+    grid-area: main;
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.alert {
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: var(--textColor);
+    background-color: var(--successColor);
+}
+
+.add-room-form {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.add-room-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.add-room-form button {
+    background-color: var(--primaryButton);
+    color: var(--textColor);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-room-form button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    background-color: var(--tableBg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.custom-table th, .custom-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-table thead {
+    background-color: var(--headerBg);
+    color: var(--textColor);
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.custom-table td:last-child {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    color: var(--textColor);
+    transition: background-color 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn.edit-btn {
+    background-color: var(--editButton);
+}
+
+.btn.delete-btn {
+    background-color: var(--deleteButton);
+}
+
+.btn.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.btn.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.empty-row {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+
+.edit-room-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+/* Buttons */
+.primary-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: #0056b3;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Error Alert Styling */
+.error-alert {
+    background-color: #dc3545;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

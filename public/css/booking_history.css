@@ -1,0 +1,239 @@
+:root {
+    --primaryColor: #013991;
+    --textColor: #ffffff;
+    --bgColor: #f0f0f0;
+    --tableBg: #ffffff;
+    --headerBg: var(--primaryColor);
+    --headerText: var(--textColor);
+    --rowHover: #f9f9f9;
+    --successColor: #28a745;
+    --dangerColor: #dc3545;
+    --warningColor: #ffc107;
+    --pendingColor: #808080;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "nav main";
+    grid-template-columns: 15% 1fr;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--bgColor);
+}
+
+.nav {
+    grid-area: nav;
+    background-color: var(--primaryColor);
+}
+
+.dash-main {
+    grid-area: main;
+    padding: 20px;
+}
+
+.title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.table-container {
+    background-color: var(--tableBg);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.custom-table thead {
+    background-color: var(--headerBg);
+    color: var(--headerText);
+}
+
+.custom-table th, .custom-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.custom-table tbody tr:hover {
+    background-color: var(--rowHover);
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+.status-badge.accepted {
+    background-color: var(--successColor);
+}
+
+.status-badge.denied {
+    background-color: var(--dangerColor);
+}
+
+.status-badge.canceled {
+    background-color: var(--warningColor);
+}
+
+.status-badge.pending {
+    background-color: var(--pendingColor);
+}
+
+.no-bookings {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /* Adjust width as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+/* Close button */
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+  }
+  
+  .holder {
+    width: 100%;
+    max-width: 500px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .data-input {
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .date-time {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  
+  .time-group {
+    flex: 1;
+  }
+  
+  .form-label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .form-select,
+  .form-input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%; 
+    box-sizing: border-box; 
+  }
+  
+  .time-input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    outline: none;
+    width: 23%;
+    box-sizing: border-box;
+  }
+  
+  .nama-acara,
+  .deskripsi-acara {
+    width: 100%;
+  }
+  
+  .deskripsi-acara {
+    resize: none;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--primaryColor);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+  }
+  
+  #submit-btn:hover {
+    background-color: rgb(114, 114, 235);
+  }

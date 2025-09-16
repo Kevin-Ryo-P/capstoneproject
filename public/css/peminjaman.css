@@ -1,0 +1,244 @@
+:root{
+  --primaryColor: rgba(1,39,145,255);
+  --externalMain: rgba(100,203,192,255);
+  --externalSecond:none;
+  --internalMain:rgba(45,201,113,255);
+  --internalSecond:none;
+  --maintananceMain:rgba(220,74,64,255);
+  --maintananceSecond:none;
+  --zoomMain:rgba(242,187,7,255);
+  --zoomSecond:none;
+}
+
+body{
+  margin: 0;
+}
+/* set template grid */
+.website-body{
+  display: grid;
+  grid-template-areas: 
+  "header header secondary"
+  "main main secondary"
+  "main main secondary"
+  ;
+  grid-template-columns: 1fr 1fr 20%;
+  grid-template-rows: 80px 1fr;
+  min-height: 100vh;
+  column-gap: 10px;
+  grid-gap: 10px;
+}
+/*  */
+
+.header{
+  grid-area: header;
+  border-bottom: solid 3px var(--primaryColor);
+}
+  .navbar{
+      margin-top: 10px;
+      margin-left: 16px;
+      display: flex;
+  }
+      .logo{
+          display: flex;
+          align-items: center;
+      }
+
+      .logoUndip{
+          width: 50px;
+      }
+
+      .logoTextContainer{
+          margin-left: 10px;
+      }
+          .logoText{
+              margin: 0;
+              display: block;
+          }
+      .navbarMenu{
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+      }
+      
+          .navbarMenuOpt{
+              margin-left: 10px;
+          }
+.main{
+  grid-area: main;
+  display: grid;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3%;
+}
+
+.holder {
+  width: 100%;
+  max-width: 500px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.data-input {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-time {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.time-group {
+  flex: 1;
+}
+
+.form-label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-select,
+.form-input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.time-input {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  outline: none;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.nama-acara,
+.deskripsi-acara {
+  width: 100%;
+}
+
+.deskripsi-acara {
+  resize: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+#submit-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+#submit-btn:hover {
+  background-color: rgb(114, 114, 235);
+}
+
+#bookingdate::-webkit-calendar-picker-indicator {
+  width: 32px;
+  height: 32px;
+}
+
+.secondary{
+  grid-area: secondary;
+  background-color: var(--primaryColor);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+  .search-bar-holder{
+      display: flex;
+      width: 100%;
+      padding-bottom: 27px;
+      border-bottom: solid  3px white;
+  }
+      .search-bar{
+          flex: 1;
+          border: none;
+          border-radius: 20px;
+          display: block;
+          padding: 9px 4px 9px 40px;
+          background: black url('/img/search.svg') no-repeat 13px;
+          background-color: white;
+      }
+
+      .search-bar:focus{
+          outline: none;
+      }
+
+  .categories{
+      position: sticky;
+      display: grid;
+      width: 100%;
+      flex-grow: 1;
+      max-height: 300px;
+  }
+      .cat-title{
+          color: white;
+      }
+      
+      .cat-text{
+          color: white;
+          padding-right: 20px;
+      }
+
+      .cat-holder{
+          display: flex;
+          align-items: center;
+      }
+
+          .cat-exter{
+              height: 5px;
+              width: 100%;
+              background-color: var(--externalMain);
+          }
+
+          .cat-inter{
+              height: 5px;
+              width: 100%;
+              background-color: var(--internalMain);
+          }
+
+          .cat-maint{
+              height: 5px;
+              width: 100%;
+              background-color: var(--maintananceMain)
+          }
+
+          .cat-zoom{
+              height: 5px;
+              width: 100%;
+              background-color: var(--zoomMain);
+          }
